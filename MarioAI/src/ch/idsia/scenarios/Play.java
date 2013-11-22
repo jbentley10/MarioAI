@@ -2,6 +2,9 @@ package ch.idsia.scenarios;
 
 import ch.idsia.ai.agents.Agent;
 import ch.idsia.ai.agents.AgentsPool;
+import ch.idsia.ai.agents.SimpleAgent;
+import ch.idsia.ai.agents.ai.SRNAgent;
+import ch.idsia.ai.agents.ai.ScaredAgent;
 import ch.idsia.ai.agents.human.HumanKeyboardAgent;
 import competition.icegic.robin.*;
 import competition.icegic.sergiolopez.*;

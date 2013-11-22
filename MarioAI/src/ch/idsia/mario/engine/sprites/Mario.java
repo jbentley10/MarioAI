@@ -101,6 +101,13 @@ public class Mario extends Sprite
 
     public Sprite carried = null;
     private static Mario instance;
+    
+    public boolean OnGround () {
+    	if (onGround == true) {
+    		return true; 
+    	}
+    	return false; 
+    }
 
     public Mario(LevelScene world)
     {

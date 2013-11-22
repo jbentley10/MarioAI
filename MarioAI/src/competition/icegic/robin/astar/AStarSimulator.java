@@ -20,10 +20,6 @@ public class AStarSimulator
     public int targetX = 100;
     public int targetY = 100;
     
-    //private LevelScene lsCopy;
-    
-    //private int searchResolution = 10;
-    
     private ArrayList<boolean[]> currentActionPlan;
     int ticksBeforeReplanning = 0;
     
@@ -178,10 +174,7 @@ public class AStarSimulator
     	if (canJumpHigher(currentPos))  possibleActions.add(createAction(true, false, false, true, false));
     	possibleActions.add(createAction(true, false, false, false, true));
     	if (canJumpHigher(currentPos))  possibleActions.add(createAction(true, false, false, true, true));
-  	
-    	
-    	// duck (probably sucks always)
-    	
+  	    	
     	return possibleActions;
     }
     
@@ -293,9 +286,7 @@ public class AStarSimulator
     	posPool = new ArrayList<SearchPos>();
     	posPool.addAll(startPos.generateChildren());
     	currentSearchStartingMarioXPos = levelScene.mario.x; 
-    	bestPosition = startPos;
-    	
-    	
+    	bestPosition = startPos;	
     }
     
     private ArrayList<boolean[]> extractPlan()

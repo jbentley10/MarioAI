@@ -54,16 +54,8 @@ public class AStarAgent extends BasicAIAgent implements Agent
     	ac[Mario.KEY_RIGHT] = true;
     	ac[Mario.KEY_SPEED] = true;
     	
-    	//byte[][] scene = observation.getCompleteObservation();//observation.getLevelSceneObservation(0);
     	byte[][] scene = observation.getLevelSceneObservation();
     	float[] enemies = observation.getEnemiesFloatPos();
-    	
-    	//observation.getCompleteObservation();
-    	//System.out.println("Clean scene:");
-    	//printLevel(scene);
-    	
-    	//System.out.println("Complete Obs:");
-    	//printLevel(observation.getCompleteObservation());
     	
     	if (sim.levelScene.verbose > 2) System.out.println("Simulating using action: " + sim.printAction(action));
         sim.advanceStep(action);   
@@ -92,7 +84,7 @@ public class AStarAgent extends BasicAIAgent implements Agent
 			      " Diff: " + (f[0]- sim.levelScene.mario.x) + " " + (f[1]-sim.levelScene.mario.y));
 			sim.levelScene.mario.x = f[0];
 			sim.levelScene.mario.y = f[1];
-			sim.levelScene.mario.xa = (f[0] - lastX) *0.89f;
+			sim.levelScene.mario.xa = (f[0] - lastX) * 0.89f;
 			sim.levelScene.mario.ya = (f[1] - lastY) * 0.85f + 3f;
 			//errCount++;
 			//if (errCount > 1)
